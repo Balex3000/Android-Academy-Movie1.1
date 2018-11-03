@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--ImageView
+        android:id="@+id/img_large_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/large_header_image"
+        android:contentDescription="@string/img_large_header_desc" /-->
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/large_header_image"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:paddingStart="10dp">
+
+        <ImageView
+            android:id="@+id/img_small"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/small_image" />
+
+        <TextView
+            android:id="@+id/txt_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/img_small"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            tools:text="Avengers: Infinity War"/>
+
+        <TextView
+            android:id="@+id/txt_released_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_small"
+            android:layout_below="@id/txt_movie_name"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Released:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/txt_released_label"
+            android:layout_below="@id/txt_movie_name"
+            android:layout_marginStart="16dp"
+            android:textStyle="normal"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="2018-01-01"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:text="description"/>
+
+</LinearLayout>
